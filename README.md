@@ -6,7 +6,7 @@ cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their 
 Installation
 ------------
 
-Upload the steak_sauce folder to system/expressionengine/third_party
+Upload the __`steak_sauce`__ folder to __`system/expressionengine/third_party`__
 
 
 Usage
@@ -19,7 +19,7 @@ Simply wrap the tags around the integer or letter like so:
 
 ### Example Usage
 
-I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
+I'm using this to convert Matrix `{row_count}`s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
 
 Known Issues
 ------------
