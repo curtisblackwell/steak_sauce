@@ -1,8 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+require_once(PATH_THIRD . 'steak_sauce/config.php');
+
 $plugin_info = array(
-	'pi_name'			=> '_cpb steak sauce',
-	'pi_version'		=> '0.1',
+	'pi_name'			=>  ADD_ON_NAME,
+	'pi_version'		=>  ADD_ON_V,
 	'pi_author'			=> 'Curtis Blackwell',
 	'pi_author_url'		=> 'http://curtisblackwell.com',
 	'pi_description'	=> 'Converts letters to numbers and vice versa.',
@@ -10,10 +12,9 @@ $plugin_info = array(
 );
 
 /*
-	_cpb steak sauce Class
+	cpb Steak Sauce Class
 
-	@package	ExpressionEngine
-	@version	0.1
+	@package	cpb Steak Sauce
 	@author		Curtis Blackwell
 	@link		http://curtisblackwell.com/expressionengine-add-ons/plugins/steak-sauce
 	@license	http://creativecommons.org/licenses/by-sa/3.0/
@@ -90,18 +91,34 @@ class Steak_sauce {
 	ob_start();
 	?>
 
-	cpb Steak Sauce converts integers to their corresponding letters and vice versa. For example, a = 1, b = 2, c = 3, etc.
+	cpb Steak Sauce
+	===============
+
+	cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their corresponding letters and vice versa. For example, a = 1, b = 2, c = 3, etc.
+
+	Installation
+	------------
+
+	Upload the steak_sauce folder to system/expressionengine/third_party
+
+
+	Usage
+	-----
 
 	Simply wrap the tags around the integer or letter like so:
 
-	{exp:steak_sauce}a{/exp:steak_sauce} returns "1"
-	{exp:steak_sauce}1{/exp:steak_sauce} returns "a"
+		{exp:steak_sauce}a{/exp:steak_sauce} returns "1"
+		{exp:steak_sauce}1{/exp:steak_sauce} returns "a"
 
-	Example Usage
-	IÕm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
+	### Example Usage
+
+	I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
 
 	Known Issues
-	Due to a lack of knowledge, this plugin is limited to lowercase letters. IÕll probably update it to support capital letters as well once I learn some more PHP.
+	------------
+
+	Due to a lack of knowledge, this plugin is limited to lowercase letters. I'll probably update it to support capital letters as well once I learn some more PHP.
+
 
 	<?php
 	$buffer = ob_get_contents();
