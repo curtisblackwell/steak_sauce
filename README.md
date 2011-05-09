@@ -1,12 +1,12 @@
 cpb Steak Sauce
 ===============
 
-cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their corresponding letters and vice versa. For example, a = 1, b = 2, c = 3, etc.
+cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their corresponding letters and vice versa. For example, A = 1, B = 2, C = 3, etc.
 
 Installation
 ------------
 
-Upload the __`steak_sauce`__ folder to __`system/expressionengine/third_party`__
+Upload the steak_sauce folder to system/expressionengine/third_party
 
 
 Usage
@@ -14,14 +14,13 @@ Usage
 
 Simply wrap the tags around the integer or letter like so:
 
-	{exp:steak_sauce}a{/exp:steak_sauce} returns "1"
-	{exp:steak_sauce}1{/exp:steak_sauce} returns "a"
+	{exp:steak_sauce}A{/exp:steak_sauce} returns "1"
+	{exp:steak_sauce}1{/exp:steak_sauce} returns "A"
+
+If you want to convert integers to lowercase letters you can use the case parameter:
+
+	{exp:steak_sauce case="lowercase"}1{/exp:steak_sauce} returns "a"
 
 ### Example Usage
 
-I'm using this to convert Matrix `{row_count}`s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
-
-Known Issues
-------------
-
-Due to a lack of knowledge, this plugin is limited to lowercase letters. I'll probably update it to support capital letters as well once I learn some more PHP.
+I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).

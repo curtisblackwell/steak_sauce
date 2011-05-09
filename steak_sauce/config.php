@@ -1,7 +1,7 @@
 <?php
 if (! defined('ADD_ON_V')) {
 	define('ADD_ON_NAME', 'cpb Steak Sauce');
-	define('ADD_ON_V', '0.1.1');
+	define('ADD_ON_V', '1');
 }
 
 $config['name']									= ADD_ON_NAME;

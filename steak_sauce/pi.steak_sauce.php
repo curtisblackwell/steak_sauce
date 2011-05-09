@@ -27,48 +27,55 @@ class Steak_sauce {
 		$this->EE =& get_instance();
 
 		$int_to_let = array(
-			1	=> 'a',
-			2	=> 'b',
-			3	=> 'c',
-			4	=> 'd',
-			5	=> 'e',
-			6	=> 'f',
-			7	=> 'g',
-			8	=> 'h',
-			9	=> 'i',
-			10	=> 'j',
-			11	=> 'k',
-			12	=> 'l',
-			13	=> 'm',
-			14	=> 'n',
-			15	=> 'o',
-			16	=> 'p',
-			17	=> 'q',
-			18	=> 'r',
-			19	=> 's',
-			20	=> 't',
-			21	=> 'u',
-			22	=> 'v',
-			23	=> 'w',
-			24	=> 'x',
-			25	=> 'y',
-			26	=> 'z'
+			 1	=> 'A',
+			 2	=> 'B',
+			 3	=> 'C',
+			 4	=> 'D',
+			 5	=> 'E',
+			 6	=> 'F',
+			 7	=> 'G',
+			 8	=> 'H',
+			 9	=> 'I',
+			10	=> 'J',
+			11	=> 'K',
+			12	=> 'L',
+			13	=> 'M',
+			14	=> 'N',
+			15	=> 'O',
+			16	=> 'P',
+			17	=> 'Q',
+			18	=> 'R',
+			19	=> 'S',
+			20	=> 'T',
+			21	=> 'U',
+			22	=> 'V',
+			23	=> 'W',
+			24	=> 'X',
+			25	=> 'Y',
+			26	=> 'Z'
 		);
 
-		$tag_data = $this->EE->TMPL->tagdata;
+		$tagdata = $this->EE->TMPL->tagdata;
 
-		if (is_numeric($tag_data)) {
+		if (is_numeric($tagdata)) {
 
-			if ($tag_data < 1 || $tag_data >26) {
+			// if the number entered isn't within our 1-26 range, don't return anything.
+			if ($tagdata < 1 || $tagdata >26) {
 				$this->return_data = '';
 			} else {
-				$this->return_data = $int_to_let[$tag_data];
+				$case = ($this->EE->TMPL->fetch_param('case')=='lowercase') ? true : false;
+				$this->return_data = ($case) ? strtolower($int_to_let[$tagdata]) : $int_to_let[$tagdata];
 			}
 
 		} else {
 
+			// if it's not a number, it must be a letter. better flip the array then make sure it's capital so that this sucker works.
 			$int_to_let = array_flip($int_to_let);
-			$this->return_data = $int_to_let[$tag_data];
+			if (ctype_upper($tagdata)) {
+				$this->return_data = $int_to_let[$tagdata];
+			} else {
+				$this->return_data = $int_to_let[strtoupper($tagdata)];
+			}
 
 		}
 
@@ -91,34 +98,32 @@ class Steak_sauce {
 	ob_start();
 	?>
 
-	cpb Steak Sauce
-	===============
+cpb Steak Sauce
+===============
 
-	cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their corresponding letters and vice versa. For example, a = 1, b = 2, c = 3, etc.
+cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their corresponding letters and vice versa. For example, A = 1, B = 2, C = 3, etc.
 
-	Installation
-	------------
+Installation
+------------
 
-	Upload the steak_sauce folder to system/expressionengine/third_party
+Upload the steak_sauce folder to system/expressionengine/third_party
 
 
-	Usage
-	-----
+Usage
+-----
 
-	Simply wrap the tags around the integer or letter like so:
+Simply wrap the tags around the integer or letter like so:
 
-		{exp:steak_sauce}a{/exp:steak_sauce} returns "1"
-		{exp:steak_sauce}1{/exp:steak_sauce} returns "a"
+	{exp:steak_sauce}A{/exp:steak_sauce} returns "1"
+	{exp:steak_sauce}1{/exp:steak_sauce} returns "A"
 
-	### Example Usage
+If you want to convert integers to lowercase letters you can use the case parameter:
 
-	I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
+	{exp:steak_sauce case="lowercase"}1{/exp:steak_sauce} returns "a"
 
-	Known Issues
-	------------
+### Example Usage
 
-	Due to a lack of knowledge, this plugin is limited to lowercase letters. I'll probably update it to support capital letters as well once I learn some more PHP.
-
+I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
 
 	<?php
 	$buffer = ob_get_contents();
