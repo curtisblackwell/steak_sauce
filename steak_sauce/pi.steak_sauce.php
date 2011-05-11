@@ -7,7 +7,7 @@ $plugin_info = array(
 	'pi_version'		=>  ADD_ON_V,
 	'pi_author'			=> 'Curtis Blackwell',
 	'pi_author_url'		=> 'http://curtisblackwell.com',
-	'pi_description'	=> 'Converts letters to numbers and vice versa.',
+	'pi_description'	=> 'Converts numbers to letters and vice versa.',
 	'pi_usage'			=>  Steak_sauce::usage()
 );
 
@@ -26,7 +26,7 @@ class Steak_sauce {
 
 		$this->EE =& get_instance();
 
-		$int_to_let = array(
+		$integer_to_letter = array(
 			 1	=> 'A',
 			 2	=> 'B',
 			 3	=> 'C',
@@ -64,17 +64,17 @@ class Steak_sauce {
 				$this->return_data = '';
 			} else {
 				$case = ($this->EE->TMPL->fetch_param('case')=='lowercase') ? true : false;
-				$this->return_data = ($case) ? strtolower($int_to_let[$tagdata]) : $int_to_let[$tagdata];
+				$this->return_data = ($case) ? strtolower($integer_to_letter[$tagdata]) : $integer_to_letter[$tagdata];
 			}
 
 		} else {
 
 			// if it's not a number, it must be a letter. better flip the array then make sure it's capital so that this sucker works.
-			$int_to_let = array_flip($int_to_let);
+			$integer_to_letter = array_flip($integer_to_letter);
 			if (ctype_upper($tagdata)) {
-				$this->return_data = $int_to_let[$tagdata];
+				$this->return_data = $integer_to_letter[$tagdata];
 			} else {
-				$this->return_data = $int_to_let[strtoupper($tagdata)];
+				$this->return_data = $integer_to_letter[strtoupper($tagdata)];
 			}
 
 		}
