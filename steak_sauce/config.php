@@ -1,10 +1,10 @@
 <?php
-if (! defined('ADD_ON_V')) {
-	define('ADD_ON_NAME', 'cpb Steak Sauce');
-	define('ADD_ON_V', '1');
+if (! defined('STEAK_SAUCE_V')) {
+	define('STEAK_SAUCE_NAME', 'cpb Steak Sauce');
+	define('STEAK_SAUCE_V', '1.1');
 }
 
-$config['name']									= ADD_ON_NAME;
-$config['version']								= ADD_ON_V;
+$config['name']									= STEAK_SAUCE_NAME;
+$config['version']								= STEAK_SAUCE_V;
 $config['nsm_addon_updater']['versions_xml']	= 'http://curtisblackwell.com/expressionengine-add-ons/rss_steak_sauce';
 ?>

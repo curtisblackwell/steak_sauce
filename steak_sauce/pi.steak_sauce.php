@@ -3,8 +3,8 @@
 require_once(PATH_THIRD . 'steak_sauce/config.php');
 
 $plugin_info = array(
-	'pi_name'			=>  ADD_ON_NAME,
-	'pi_version'		=>  ADD_ON_V,
+	'pi_name'			=>  STEAK_SAUCE_NAME,
+	'pi_version'		=>  STEAK_SAUCE_V,
 	'pi_author'			=> 'Curtis Blackwell',
 	'pi_author_url'		=> 'http://curtisblackwell.com',
 	'pi_description'	=> 'Converts numbers to letters and vice versa.',
