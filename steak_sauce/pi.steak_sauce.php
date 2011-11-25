@@ -1,5 +1,38 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ * ExpressionEngine - by EllisLab
+ *
+ * @package		ExpressionEngine
+ * @author		ExpressionEngine Dev Team
+ * @copyright	Copyright (c) 2003 - 2011, EllisLab, Inc.
+ * @license		http://expressionengine.com/user_guide/license.html
+ * @link		http://expressionengine.com
+ * @since		Version 2.0
+ * @filesource
+ */
+
+// ------------------------------------------------------------------------
+
+/**
+ * cpb Steak Sauce
+ *
+ * An ExpressionEngine 2 plugin.
+ *
+ * NOTICE OF LICENSE
+ *
+ * Licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License
+ *
+ * @package		ExpressionEngine
+ * @subpackage	Addons
+ * @category	Plugin
+ * @author		Curtis Blackwell
+ * @copyright   Copyright (c) 2011, Curtis Blackwell (http://curtisblackwell.com)
+ * @link        http://curtisblackwell.com/expressionengine-add-ons/cpb-steak-sauce
+ * @license		http://creativecommons.org/licenses/by-sa/3.0/
+ * @since       Version 0.1
+ */
+
 require_once(PATH_THIRD . 'steak_sauce/config.php');
 
 $plugin_info = array(
@@ -11,14 +44,6 @@ $plugin_info = array(
 	'pi_usage'			=>  Steak_sauce::usage()
 );
 
-/*
-	cpb Steak Sauce Class
-
-	@package	cpb Steak Sauce
-	@author		Curtis Blackwell
-	@link		http://curtisblackwell.com/expressionengine-add-ons/plugins/steak-sauce
-	@license	http://creativecommons.org/licenses/by-sa/3.0/
-*/
 
 class Steak_sauce {
 
