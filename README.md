@@ -6,7 +6,7 @@ cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their 
 Installation
 ------------
 
-Upload the steak_sauce folder to system/expressionengine/third_party
+Upload the `steak_sauce` folder to `system/expressionengine/third_party`
 
 
 Usage
@@ -23,7 +23,7 @@ If you want to convert integers to lowercase letters you can use the case parame
 
 ### Example Usage
 
-I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
+I'm using this to convert Matrix `{row_count}`s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
 
 Thanks
 ------
