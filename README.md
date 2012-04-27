@@ -6,7 +6,7 @@ cpb Steak Sauce is an ExpressionEngine 2 plugin that converts integers to their 
 Installation
 ------------
 
-Upload the steak_sauce folder to system/expressionengine/third_party
+Upload the `steak_sauce` folder to `system/expressionengine/third_party`
 
 
 Usage
