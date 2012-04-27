@@ -26,5 +26,4 @@ if (! defined('STEAK_SAUCE_V')) {
 
 $config['name']									= STEAK_SAUCE_NAME;
 $config['version']								= STEAK_SAUCE_V;
-$config['nsm_addon_updater']['versions_xml']	= 'http://curtisblackwell.com/expressionengine-add-ons/rss_steak_sauce';
 ?>

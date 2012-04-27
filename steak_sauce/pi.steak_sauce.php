@@ -123,7 +123,7 @@ class Steak_sauce {
 	ob_start();
 	?>
 
-	http://curtisblackwell.com/expressionengine-add-ons/cpb-steak-sauce
+	http://curtisblackwell.github.com/cpb_steak_sauce/
 
 	<?php
 	$buffer = ob_get_contents();
