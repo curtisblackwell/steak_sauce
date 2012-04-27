@@ -23,7 +23,7 @@ If you want to convert integers to lowercase letters you can use the case parame
 
 ### Example Usage
 
-I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
+I'm using this to convert Matrix `{row_count}`s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
 
 Thanks
 ------
